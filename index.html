@@ -102,7 +102,7 @@
       transform-origin: center;
       will-change: transform;
       backface-visibility: hidden;
-      animation: bossAnim 9.4s cubic-bezier(.22, .61, .36, 1) forwards;
+      animation: bossAnim 8.2s cubic-bezier(.22, .61, .36, 1) forwards;
     }
 
     .leopard {
@@ -115,7 +115,7 @@
       transform-origin: center;
       will-change: transform;
       backface-visibility: hidden;
-      animation: leopardAnim 9.4s cubic-bezier(.22, .61, .36, 1) forwards;
+      animation: leopardAnim 8.2s cubic-bezier(.22, .61, .36, 1) forwards;
     }
 
     .offer-card,
@@ -322,6 +322,14 @@
     @keyframes leopardAnim {
       from {
         transform: translate3d(102px, 245px, 0) scale3d(2, 2, 1);
+        animation-timing-function: cubic-bezier(.48, .02, .82, .62);
+      }
+      12% {
+        transform: translate3d(100px, 229px, 0) scale3d(1.94, 1.94, 1);
+        animation-timing-function: cubic-bezier(.18, .72, .18, 1);
+      }
+      95% {
+        transform: translate3d(72px, -21px, 0) scale3d(1, 1, 1);
       }
       to {
         transform: translate3d(72px, -21px, 0) scale3d(1, 1, 1);
@@ -331,6 +339,14 @@
     @keyframes bossAnim {
       from {
         transform: translate3d(-78px, 250px, 0) scale3d(2, 2, 1);
+        animation-timing-function: cubic-bezier(.48, .02, .82, .62);
+      }
+      12% {
+        transform: translate3d(-65px, 234px, 0) scale3d(1.94, 1.94, 1);
+        animation-timing-function: cubic-bezier(.18, .72, .18, 1);
+      }
+      95% {
+        transform: translate3d(143px, -18px, 0) scale3d(1, 1, 1);
       }
       to {
         transform: translate3d(143px, -18px, 0) scale3d(1, 1, 1);
