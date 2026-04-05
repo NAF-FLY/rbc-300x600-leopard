@@ -49,6 +49,17 @@
       background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .24) 40%, rgba(0, 0, 0, .68) 100%);
     }
 
+    .corner-logo {
+      right: 23px;
+      bottom: 37px;
+      width: 79px;
+      height: 58px;
+      z-index: 3;
+      opacity: 1;
+      will-change: opacity;
+      animation: cornerLogoFade .35s ease-out 1.05s forwards;
+    }
+
     .final-fade {
       inset: 0;
       z-index: 10;
@@ -219,14 +230,14 @@
       opacity: 0;
       transform: translate3d(0, 100%, 0);
       animation:
-        titleCurrentEnter .92s cubic-bezier(.2, .8, .2, 1) forwards,
-        titleCurrentFlip .9s cubic-bezier(.2, .8, .2, 1) forwards;
+        titleCurrentEnter 1.28s cubic-bezier(.22, .61, .36, 1) forwards,
+        titleCurrentFlip 1.12s cubic-bezier(.22, .61, .36, 1) forwards;
     }
 
     .title-face.next {
       opacity: 0;
       transform: translate3d(0, 100%, 0);
-      animation: titleNextFlip .9s cubic-bezier(.2, .8, .2, 1) forwards;
+      animation: titleNextFlip 1.12s cubic-bezier(.22, .61, .36, 1) forwards;
     }
 
     .title-row.row-1 .title-face.current {
@@ -437,6 +448,15 @@
       }
     }
 
+    @keyframes cornerLogoFade {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+      }
+    }
+
     @keyframes finalFade {
       from {
         opacity: 0;
@@ -484,6 +504,7 @@
     <img class="layer bg" src="bg.png" alt="" />
     <img class="layer boss" src="boss.png" alt="" />
     <img class="layer leopard" src="leopard.png" alt="" />
+    <img class="layer corner-logo" src="logo.png" alt="" aria-hidden="true" />
     <div class="layer bottom-fade" aria-hidden="true"></div>
     <div class="bottom-panel-glow" aria-hidden="true"></div>
     <div class="offer-card">
